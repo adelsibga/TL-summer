@@ -11,9 +11,8 @@ Console.WriteLine("Enter your github link");
 string github = Console.ReadLine();
 
 Console.Clear();
-Console.Write(
-    $"Full name: {name},\n" +
-    $"Age: {age},\n" +
-    $"Email: {email},\n" +
-    $"Github link: {github}"
+Console.Write(@$"Full name: {name},
+    Age: {age},
+    Email: {email},
+    Github link: {github}"
 );
