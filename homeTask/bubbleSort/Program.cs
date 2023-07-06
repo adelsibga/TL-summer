@@ -1,21 +1,18 @@
-﻿int[] arr = {800, 11, 50, 771, 649, 770, 240, 9};
+﻿int[] elements = {800, 11, 50, 771, 649, 770, 240, 9};
 
-int tmp = 0;
+int length = elements.Length;
 
-for (int i = 0; i < arr.Length; i++)
+for (int i = 0; i < length; i++)
 {
-    for (int j = 0; j < arr.Length - 1; j++)
+    for (int j = 0; j < length - 1 - i; j++)
     {
-        if (arr[j] > arr[j + 1])
+        if (elements[j] > elements[j + 1])
         {
-            tmp = arr[j + 1];
-            arr[j + 1] = arr[j];
-            arr[j] = tmp;
+            elements[j] = elements[j] + elements[j + 1];
+            elements[j + 1] = elements[j] - elements[j + 1];
+            elements[j] = elements[j] - elements[j + 1];
         }
     }
 }
 
-for (int i = 0; i < arr.Length; i++)
-{
-    Console.Write(arr[i] + " ");
-}
+Console.WriteLine(String.Join(" ", elements));
