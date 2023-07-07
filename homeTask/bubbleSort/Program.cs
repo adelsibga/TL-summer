@@ -1,5 +1,4 @@
 ﻿int[] elements = { 800, 11, 50, 771, 649, 770, 240, 9 };
-
 int length = elements.Length;
 
 void bubbleSort(int[] arr)
@@ -9,6 +8,7 @@ void bubbleSort(int[] arr)
     for(int i = 0; i < length; i++)
     {
         swapped = false;
+
         for(int j = 0; j < length - 1 - i; j++)
         {
             if(elements[j] > elements[j + 1])
