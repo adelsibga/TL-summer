@@ -52,18 +52,6 @@ public class Triangle : IShape
             LeftSide + RightSide > BaseSide;
     }
 
-    public Triangle(double side1, double side2, double side3)
-    {
-        BaseSide = side1;
-        LeftSide = side2;
-        RightSide = side3;
-
-        if(!isTriangleExist())
-        {
-            throw new ArgumentException("Triangle does not exist");
-        }
-    }
-
     public double CalculateArea()
     {
         double semiPerimeter = CalculatePerimeter() / 2;

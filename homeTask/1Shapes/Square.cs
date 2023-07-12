@@ -3,7 +3,6 @@
 public class Square : IShape
 {
     private double _side;
-
     public double sideLength
     {
         get => _side;
@@ -15,11 +14,6 @@ public class Square : IShape
             }
             _side = value;
         }
-    }
-
-    public Square(double SideLength)
-    {
-        sideLength = SideLength;
     }
 
     public double CalculateArea()
