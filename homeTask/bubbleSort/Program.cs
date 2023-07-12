@@ -1,4 +1,4 @@
-﻿int[] elements = { 800, 11, 50, 771, 649, 770, 240, 9 };
+int[] elements = { 800, 11, 50, 771, 649, 770, 240, 9 };
 
 int length = elements.Length;
 int i = 0;
