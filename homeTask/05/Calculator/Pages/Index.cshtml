@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div class="text-center w-50 m-auto">
+    <h1 class="display-4">Сolumn calculator</h1>
+    <form class="d-flex flex-column" method="post">
+
+        <div class="input-group mb-3">
+            <input asp-for="Operand1"
+                   name="Operand1"
+                   class="form-control"
+                   type="number"
+                   placeholder="Enter the first operand"
+                   aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-default"
+                   required
+                   value="">
+        </div>
+
+        <div class="input-group mb-3">
+            <input asp-for="Operand2"
+                   name="Operand2"
+                   class="form-control"
+                   type="number"
+                   placeholder="Enter the second operand"
+                   aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-default"
+                   required
+                   value="">
+        </div>
+
+        <div class="mb-3">
+            <select asp-for="Operator"
+                    asp-items="Model.OperatorsList"
+                    class="form-select"
+                    name="operator"
+                    id="operations-select"
+                    aria-label="Default select example"
+                    required>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-5">Calculate</button>
+    </form>
+
+    @if(@Model.Operator == "+" || Model.Operator == "-")
+    {
+        <div class="answer-wrapper d-flex align-items-center justify-content-center">
+            <span class="operation me-1 fs-1">@Model.Operator</span>
+            <div class="operand-wrapper d-flex flex-column align-items-end fs-1">
+                <span class="first-operand">@Model.Operand1</span>
+                <span class="second-operand border-bottom box-shadow">@Model.Operand2</span>
+                <span class="result">@Model.Result</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        // TODO: Поправить верстку под деление и умножение
+        // TODO: Пользователь может ввести только натуральные положительные целые числа
+        // TODO: При вычитании из меньшего большего, в столбике числа менются местами, но в результате выводится знак минус.
+        <div class="del12 answer-wrapper d-flex align-items-center justify-content-center fs-1">
+            <span class="operation me-1">@Model.Operator 111</span>
+            <div class="operand-wrapper d-flex flex-column align-items-end">
+                <span class="first-operand">@Model.Operand1</span>
+                <span class="second-operand border-bottom box-shadow">@Model.Operand2</span>
+                <span class="result">@Model.Result</span>
+            </div>
+        </div>
+    }
+
+    <div class="answer-error">
+        <h2 class="display-7 text-danger">Error in the example</h2>
+    </div>
+</div>
