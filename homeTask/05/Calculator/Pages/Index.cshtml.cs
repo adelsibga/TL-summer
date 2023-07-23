@@ -20,9 +20,7 @@ namespace Calculator.Pages
         {
             new SelectListItem {Value = "", Text = "Choose an operation", Selected = true},
             new SelectListItem {Value = "+", Text = "+ (addition)"},
-            new SelectListItem {Value = "-", Text = "- (subtraction)"},
-            new SelectListItem {Value = "*", Text = "* (multiplication)"},
-            new SelectListItem {Value = "/", Text = "/ (division)"},
+            new SelectListItem {Value = "-", Text = "- (subtraction)"}
         }, "Value", "Text");
 
         [BindProperty]
@@ -37,12 +35,6 @@ namespace Calculator.Pages
                     break;
                 case "-":
                     Result = Operand1 - Operand2;
-                    break;
-                case "*":
-                    Result = Operand1 * Operand2;
-                    break;
-                case "/":
-                    Result = Operand1 / Operand2;
                     break;
                 default:
                     Result = 0;

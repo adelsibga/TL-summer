@@ -51,25 +51,23 @@
         <div class="answer-wrapper d-flex align-items-center justify-content-center">
             <span class="operation me-1 fs-1">@Model.Operator</span>
             <div class="operand-wrapper d-flex flex-column align-items-end fs-1">
-                <span class="first-operand">@Model.Operand1</span>
-                <span class="second-operand border-bottom box-shadow">@Model.Operand2</span>
-                <span class="result">@Model.Result</span>
+                @if(Model.Operator == "-" && @Model.Operand2 > @Model.Operand1)
+                {
+                    <span class="first-operand">@Model.Operand2</span>
+                    <span class="second-operand border-bottom box-shadow">@Model.Operand1</span>
+                    <span class="result">@Model.Result</span>
+                }
+                else
+                {
+                    <span class="first-operand">@Model.Operand1</span>
+                    <span class="second-operand border-bottom box-shadow">@Model.Operand2</span>
+                    <span class="result">@Model.Result</span>
+                }
             </div>
         </div>
-    }
-    else
-    {
+        // TODO: Добавить "запомненные" десятки, сотни, ...
         // TODO: Поправить верстку под деление и умножение
         // TODO: Пользователь может ввести только натуральные положительные целые числа
-        // TODO: При вычитании из меньшего большего, в столбике числа менются местами, но в результате выводится знак минус.
-        <div class="del12 answer-wrapper d-flex align-items-center justify-content-center fs-1">
-            <span class="operation me-1">@Model.Operator 111</span>
-            <div class="operand-wrapper d-flex flex-column align-items-end">
-                <span class="first-operand">@Model.Operand1</span>
-                <span class="second-operand border-bottom box-shadow">@Model.Operand2</span>
-                <span class="result">@Model.Result</span>
-            </div>
-        </div>
     }
 
     <div class="answer-error">
