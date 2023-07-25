@@ -1,0 +1,37 @@
+@import '../../ui/colors';
+
+.feedback-form {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 385px;
+    margin: 0 auto 90px;
+  }
+
+  &__title {
+    align-self: flex-start;
+    margin-bottom: 45px;
+  }
+
+  &__textarea {
+    font: 400 14px/1 Inter, sans-serif;
+    min-width: 320px;
+    max-width: 385px;
+    margin: 20px 0 25px;
+    padding: 10px 15px;
+    letter-spacing: 0.21px;
+    color: #404040;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    background: #fff;
+
+    &:focus-visible {
+      border-color: rgba(64, 64, 64, 0.53);
+      outline: none;
+    }
+  }
+}
+
+.button {
+  align-self: flex-end;
+}

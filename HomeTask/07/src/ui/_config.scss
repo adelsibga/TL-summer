@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+body {
+  font: 400 14px/1 Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  letter-spacing: 0.21px;
+  color: #404040;
+  place-items: center;
+}

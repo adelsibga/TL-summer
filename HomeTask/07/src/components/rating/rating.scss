@@ -1,0 +1,20 @@
+.rating {
+  &__wrapper {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__star-wrapper {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__numbers {
+    margin: 8px 20px 0 0;
+  }
+}
