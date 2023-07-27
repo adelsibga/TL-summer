@@ -48,8 +48,8 @@ export default function App() {
           setFeedback={setFeedback}
           resetFeedback={resetFeedback}
         />
-        {feedbacks.map((feedback) => (
-          <LastFeedback amountOfStars={MAX_RATING} feedback={feedback}/>
+        {feedbacks.map((feedback, index) => (
+          <LastFeedback amountOfStars={MAX_RATING} feedback={feedback} key={index}/>
         ))}
       </div>
     </>
