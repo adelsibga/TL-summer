@@ -6,6 +6,11 @@ import './App.scss'
 
 const MAX_RATING = 5
 
+interface IReview {
+  rating: number
+  message: string
+}
+
 export default function App() {
   const INIT_RATING = 0
   const INIT_MESSAGE = ''
@@ -13,7 +18,7 @@ export default function App() {
   const [rating, setRating] = useState(INIT_RATING)
   const [message, setMessage] = useState(INIT_MESSAGE)
   const [feedback, setFeedback] = useState({rating: INIT_RATING, message: INIT_MESSAGE})
-  const [feedbacks, setFeedbacks] = useState([])
+  const [feedbacks, setFeedbacks] = useState<IReview[]>([])
 
   useEffect(() => {
     if (!feedback.message.length) {

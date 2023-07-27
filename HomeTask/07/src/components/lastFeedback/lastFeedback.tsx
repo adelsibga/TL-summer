@@ -11,7 +11,12 @@ const imagesList: string[] = [
   'src/assets/images/4.png'
 ]
 
-export const LastFeedback = ({amountOfStars, feedback}) => {
+interface IFeedback {
+  amountOfStars: number
+  feedback: { rating: number, message: string }
+}
+
+export const LastFeedback = ({amountOfStars, feedback}: IFeedback) => {
   const imgUrl = useMemo(() => imagesList[getRandomImg(imagesList.length)], [])
   const name = useMemo(() => getRandomName(6), [])
 

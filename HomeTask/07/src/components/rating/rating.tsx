@@ -7,7 +7,14 @@ import { createArray } from '../utils/utils.ts'
 
 import './rating.scss'
 
-export const Rating = ({rating, onRatingChange, amountOfStars}) => {
+interface IRating {
+  rating: number
+  onRatingChange?: (star: number) => void
+  amountOfStars: number
+}
+
+export const Rating = ({rating, onRatingChange, amountOfStars}: IRating) => {
+
   const ratingValues = useMemo(() =>
       createArray(amountOfStars),
     [amountOfStars]
@@ -26,7 +33,9 @@ export const Rating = ({rating, onRatingChange, amountOfStars}) => {
                 className="star-wrapper"
                 key={uuid()}
                 onClick={() => {
-                  onRatingChange(star)
+                  if (onRatingChange) {
+                    onRatingChange(star)
+                  }
                 }}
               >
                 {star <= rating ? <FilledStar/> : <Star/>}
