@@ -1,6 +1,8 @@
+import { useMemo } from 'react'
+
+import { getRandomImg, getRandomName } from '../utils/utils.ts'
+
 import './lastFeedback.scss'
-import { getRandomImg, getRandomName } from './utils.ts';
-import { useMemo } from 'react';
 
 const imagesList: string[] = [
   'src/assets/images/1.png',

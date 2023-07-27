@@ -1,11 +1,11 @@
-import uuid from 'react-uuid';
+import { useMemo } from 'react'
+import uuid from 'react-uuid'
 
-import { Star } from '../star/star.tsx';
-import { FilledStar } from '../filledStar/filledStar.tsx';
-import { createArray } from '../utils/utils.ts';
+import { Star } from '../star/star.tsx'
+import { FilledStar } from '../filledStar/filledStar.tsx'
+import { createArray } from '../utils/utils.ts'
 
 import './rating.scss'
-import { useMemo } from 'react';
 
 export const Rating = ({rating, onRatingChange, amountOfStars}) => {
   const ratingValues = useMemo(() =>

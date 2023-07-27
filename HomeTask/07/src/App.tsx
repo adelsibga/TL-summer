@@ -1,18 +1,18 @@
-import './App.scss';
+import { FeedbackForm } from './components/feedbackForm/feedbackForm.tsx'
+import { LastFeedback } from './components/lastFeedback/lastFeedback.tsx'
+import { useEffect, useState } from 'react'
 
-import { FeedbackForm } from './components/feedbackForm/feedbackForm.tsx';
-import { LastFeedback } from './components/lastFeedback/lastFeedback.tsx';
-import { useEffect, useState } from 'react';
+import './App.scss'
 
-const maxRating = 5
+const MAX_RATING = 5
 
 export default function App() {
-  const initRating = 0
-  const initMessage = ''
+  const INIT_RATING = 0
+  const INIT_MESSAGE = ''
 
-  const [rating, setRating] = useState(initRating)
-  const [message, setMessage] = useState(initMessage)
-  const [feedback, setFeedback] = useState({rating: initRating, message: initMessage})
+  const [rating, setRating] = useState(INIT_RATING)
+  const [message, setMessage] = useState(INIT_MESSAGE)
+  const [feedback, setFeedback] = useState({rating: INIT_RATING, message: INIT_MESSAGE})
   const [feedbacks, setFeedbacks] = useState([])
 
   useEffect(() => {
@@ -27,8 +27,8 @@ export default function App() {
   }, [feedback])
 
   const resetFeedback = () => {
-    setRating(initRating)
-    setMessage(initMessage)
+    setRating(INIT_RATING)
+    setMessage(INIT_MESSAGE)
   }
 
   return (
@@ -37,16 +37,16 @@ export default function App() {
         <FeedbackForm
           rating={rating}
           setRating={setRating}
-          amountOfStars={maxRating}
+          amountOfStars={MAX_RATING}
           message={message}
           setMessage={setMessage}
           setFeedback={setFeedback}
           resetFeedback={resetFeedback}
         />
         {feedbacks.map((feedback) => (
-          <LastFeedback amountOfStars={maxRating} feedback={feedback}/>
+          <LastFeedback amountOfStars={MAX_RATING} feedback={feedback}/>
         ))}
       </div>
     </>
-  );
+  )
 }

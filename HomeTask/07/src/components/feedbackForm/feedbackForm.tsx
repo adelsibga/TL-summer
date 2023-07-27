@@ -4,10 +4,9 @@ import { Rating } from '../rating/rating.tsx'
 import './feedbackForm.scss'
 
 export const FeedbackForm = ({rating, setRating, amountOfStars, message, setMessage, setFeedback, resetFeedback}) => {
-
   const handleChange = (event) => {
-    setMessage(event.target.value);
-  };
+    setMessage(event.target.value)
+  }
 
   return (
     <div className="feedback-form">
@@ -26,7 +25,7 @@ export const FeedbackForm = ({rating, setRating, amountOfStars, message, setMess
           resetFeedback()
           setFeedback({
             rating,
-            message,
+            message
           })
         }}/>
       </div>
