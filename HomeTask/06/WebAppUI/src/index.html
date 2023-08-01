@@ -1,13 +1,168 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div>Hello, world!</div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Swagger-killer</title>
+    </head>
+    <body>
+        <main class="swagger">
+            <div class="swagger__info-wrapper">
+                <h1 class="swagger__title">
+                    User
+                </h1>
+                <p class="swagger__text">
+                    CRUD for user entity
+                </p>
+            </div>
+            <div class="swagger-wrapper">
+                <div class="js-add-user swagger__item swagger__item_post">
+                    <div class="item__content">
+                        <div class="swagger-item__button swagger-item__button_post">
+                            POST
+                        </div>
+                        <h2 class="swagger-item__path-title">
+                            /users
+                        </h2>
+                        <p class="swagger-item__description">
+                            Add user
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            class="arrow"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                        </svg>
+                    </div>
+                    <div class="item__parameters-container">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet aperiam, aspernatur beatae cumque dolorum error explicabo
+                        facere facilis incidunt maxime molestias nesciunt nostrum numquam omnis perspiciatis quos ratione recusandae rem saepe sint tempore
+                        totam, ullam velit. Animi aperiam error exercitationem fugiat laboriosam maxime nobis quibusdam recusandae suscipit veritatis.
+                    </div>
+                </div>
+                <div class="js-get-list-of-users swagger__item swagger__item_get">
+                    <div class="item__content">
+                        <div class="swagger-item__button swagger-item__button_get">
+                            GET
+                        </div>
+                        <h2 class="swagger-item__path-title">
+                            /users
+                        </h2>
+                        <p class="swagger-item__description">
+                            Getting a list of users
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            class="arrow"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                        </svg>
+                    </div>
+                    <div class="item__parameters-container">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet animi asperiores commodi, corporis deserunt dicta dignissimos
+                        doloribus error esse excepturi expedita fugiat fugit harum hic impedit inventore ipsa laborum minus natus nemo neque nihil nobis odit
+                        officia perspiciatis quam quasi qui quia rerum sint totam unde ut voluptates voluptatum!
+                    </div>
+                </div>
+                <div class="js-get-spec-user swagger__item swagger__item_get">
+                    <div class="item__content">
+                        <div class="swagger-item__button swagger-item__button_get">
+                            GET
+                        </div>
+                        <h2 class="swagger-item__path-title">
+                            /users/{id}
+                        </h2>
+                        <p class="swagger-item__description">
+                            Getting a specific user
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            class="arrow"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                        </svg>
+                    </div>
+                    <div class="item__parameters-container">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci architecto blanditiis commodi corporis delectus dolores
+                        doloribus dolorum ducimus, enim eos est, excepturi fugiat inventore ipsa ipsum itaque iure laudantium magnam, molestiae nam neque
+                        nulla numquam omnis pariatur perferendis provident quis sapiente sint soluta tenetur ut veritatis voluptatibus voluptatum.
+                    </div>
+                </div>
+                <div class="js-update-user-data swagger__item swagger__item_put">
+                    <div class="item__content">
+                        <div class="swagger-item__button swagger-item__button_put">
+                            PUT
+                        </div>
+                        <h2 class="swagger-item__path-title">
+                            /users/{id}
+                        </h2>
+                        <p class="swagger-item__description">
+                            Update user data
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            class="arrow"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                        </svg>
+                    </div>
+                    <div class="item__parameters-container">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid blanditiis consequatur, earum eligendi eum natus tenetur
+                        vero vitae? Accusamus ad alias asperiores, atque, delectus deserunt earum eveniet laudantium necessitatibus, omnis perferendis
+                        similique voluptate! A consequuntur error et ipsam magni, maiores maxime mollitia natus, nostrum rem unde velit! Ab, quibusdam?
+                    </div>
+                </div>
+                <div class="js-deleting-user swagger__item swagger__item_delete">
+                    <div class="item__content">
+                        <div class="swagger-item__button swagger-item__button_delete">
+                            DELETE
+                        </div>
+                        <h2 class="swagger-item__path-title">
+                            /users/{id}
+                        </h2>
+                        <p class="swagger-item__description">
+                            Deleting a user
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            class="arrow"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                        </svg>
+                    </div>
+                    <div class="item__parameters-container">
+                        1
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="/scripts/slideAnimation/animation.js" defet></script>
+    </body>
 </html>

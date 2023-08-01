@@ -1,0 +1,121 @@
+@import 'vars';
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  margin-left: auto;
+  transition: all .5s;
+}
+
+.item__content {
+  display: flex;
+  align-items: center;
+}
+
+.swagger {
+  width: 100%;
+  max-width: 1460px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &__info-wrapper {
+    margin: 5px;
+    padding: 10px 20px 10px 10px;
+    border-bottom: 1px solid rgba(59, 65, 81, .3);
+  }
+
+  &__title {
+    font: 700 24px/1 sans-serif;
+    display: inline-block;
+    max-width: fit-content;
+    color: $default-text-color;
+  }
+
+  &__text {
+    font: 400 14px/1 sans-serif;
+    display: inline-block;
+    max-width: fit-content;
+    padding: 0 10px;
+    color: $default-text-color;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 15px;
+  }
+
+  &__item {
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .19);
+
+    &_post {
+      border-color: $post-color;
+      background: $post-background-color;
+    }
+
+    &_get {
+      border-color: $get-color;
+      background: $get-background-color;
+    }
+
+    &_put {
+      border-color: $put-color;
+      background: $put-background-color;
+    }
+
+    &_delete {
+      border-color: $delete-color;
+      background: $delete-background-color;
+    }
+  }
+}
+
+.swagger-item {
+  &__button {
+    font: 700 14px/1 sans-serif;
+    min-width: 80px;
+    padding: 6px 0;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+
+    &_post {
+      background: $post-color;
+    }
+
+    &_get {
+      background: $get-color;
+    }
+
+    &_put {
+      background: $put-color;
+    }
+
+    &_delete {
+      background: $delete-color;
+    }
+  }
+
+  &__path-title {
+    font: 600 16px/1 monospace;
+    padding: 0 10px;
+    word-break: break-word;
+    color: $default-text-color;
+  }
+
+  &__description {
+    font: 400 13px/1 sans-serif;
+    max-width: fit-content;
+    word-break: break-word;
+    color: $default-text-color;
+  }
+}
