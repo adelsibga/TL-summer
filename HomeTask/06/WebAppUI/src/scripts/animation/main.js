@@ -1,4 +1,4 @@
-import {slideToggle} from './slideUp'
+import {slideToggle} from './slide'
 
 const operationAddUser = document.querySelector('.js-add-user')
 const operationGetListOfUser = document.querySelector('.js-get-list-of-users')

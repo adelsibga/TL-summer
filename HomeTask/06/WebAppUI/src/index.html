@@ -41,21 +41,21 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        <label class="hidden" for="add-user"></label>
+                        <label class="hidden" for="textareaAddUser"></label>
                         <textarea
                             class="item__textarea item__textarea_add"
-                            name="add-user"
-                            id="add-user"
+                            name="textareaAddUser"
+                            id="textareaAddUser"
                             cols="30"
                             rows="10"
-                            placeholder="placeholder"
+                            placeholder=""
                         ></textarea>
 
-                        <button class="item__button" id="req-add-user">
+                        <button class="item__button" id="buttonAddUser">
                             Execute
                         </button>
 
-                        <pre class="item__response hidden" id="operation-add-user"></pre>
+                        <pre class="item__response hidden" id="messageAddUser"></pre>
                     </div>
                 </div>
 
@@ -83,11 +83,11 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        <button class="item__button" id="req-get-list-of-user">
+                        <button class="item__button" id="buttonGetUsers">
                             Execute
                         </button>
 
-                        <pre class="item__response hidden" id="res-get-users"></pre>
+                        <pre class="item__response hidden" id="messageGetUsers"></pre>
                     </div>
                 </div>
 
@@ -115,20 +115,21 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        <label class="hidden" for="get-sec-user"></label>
+                        <label class="hidden" for="inputGetUserById"></label>
                         <input
                             class="item__input item__input_get-user"
-                            id="get-sec-user"
+                            name="inputGetUserById"
+                            id="inputGetUserById"
                             type="text"
-                            title="placeholder"
-                            placeholder="placeholder"
+                            title="Enter user ID"
+                            placeholder="Enter user ID"
                         >
 
-                        <button class="item__button" id="req-get-spec-user">
+                        <button class="item__button" id="buttonGetUserById">
                             Execute
                         </button>
 
-                        <pre class="item__response hidden" id="operations-get-spec-user"></pre>
+                        <pre class="item__response hidden" id="messageGetUserById"></pre>
                     </div>
                 </div>
 
@@ -156,30 +157,31 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        <label class="hidden" for="update-user-data-id"></label>
+                        <label class="hidden" for="inputUpdateUserData"></label>
                         <input
                             class="item__input item__input_update-data"
-                            id="update-user-data-id"
+                            name="inputUpdateUserData"
+                            id="inputUpdateUserData"
                             type="text"
-                            title="placeholder"
-                            placeholder="placeholder"
+                            title="Enter user ID"
+                            placeholder="Enter user ID"
                         >
 
-                        <label class="hidden" for="update-user-data"></label>
+                        <label class="hidden" for="textareaUpdateUserData"></label>
                         <textarea
                             class="item__textarea item__textarea_update-data"
-                            name="add-user"
-                            id="update-user-data"
+                            name="textareaUpdateUserData"
+                            id="textareaUpdateUserData"
                             cols="30"
                             rows="10"
-                            placeholder="placeholder"
+                            placeholder="Enter json request body"
                         ></textarea>
 
-                        <button class="item__button" id="req-update-user-data">
+                        <button class="item__button" id="buttonUpdateUserData">
                             Execute
                         </button>
 
-                        <pre class="item__response hidden" id="operations-update-user-data"></pre>
+                        <pre class="item__response hidden" id="messageUpdateUserData"></pre>
                     </div>
                 </div>
 
@@ -207,25 +209,26 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        <label class="hidden" for="delete-user"></label>
+                        <label class="hidden" for="inputDeleteUser"></label>
                         <input
                             class="item__input item__input_delete"
-                            id="delete-user"
+                            name="inputDeleteUser"
+                            id="inputDeleteUser"
                             type="text"
-                            title="placeholder"
-                            placeholder="placeholder"
+                            title="Enter user ID"
+                            placeholder="Enter user ID"
                         >
 
-                        <button class="item__button" id="req-delete-user">
+                        <button class="item__button" id="buttonDeleteUser">
                             Execute
                         </button>
 
-                        <pre class="item__response hidden" id="res-delete-users"></pre>
+                        <pre class="item__response hidden" id="messageDeleteUser"></pre>
                     </div>
                 </div>
             </div>
         </main>
         <script type="module" src="/main.js" defer></script>
-        <script type="module" src="/scripts/slideAnimation/animation.js"></script>
+        <script type="module" src="/scripts/animation/main.js"></script>
     </body>
 </html>
