@@ -6,12 +6,7 @@
 
 .arrow {
   margin-left: auto;
-  transition: all .5s;
-}
-
-.item__content {
-  display: flex;
-  align-items: center;
+  transition: $default-transition;
 }
 
 .swagger {
@@ -19,7 +14,6 @@
   max-width: 1460px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 20px;
 
   &__info-wrapper {
     margin: 5px;
@@ -51,7 +45,6 @@
 
   &__item {
     padding: 5px;
-    cursor: pointer;
     border: 1px solid;
     border-radius: 4px;
     box-shadow: 0 0 3px rgba(0, 0, 0, .19);
@@ -84,7 +77,7 @@
     min-width: 80px;
     padding: 6px 0;
     text-align: center;
-    color: #ffffff;
+    color: $white-text-color;
     border-radius: 3px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 
@@ -117,5 +110,92 @@
     max-width: fit-content;
     word-break: break-word;
     color: $default-text-color;
+  }
+}
+
+.item {
+  &__content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__button {
+    font: 700 14px/1 sans-serif;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 40px;
+    cursor: pointer;
+    transition: $default-transition;
+    color: $white-text-color;
+    border: 2px solid $default-execute-button-color;
+    border-radius: 4px;
+    background-color: $default-execute-button-color;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      transition: $default-transition;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
+  }
+
+  &__response {
+    font: 600 12px/1 monospace;
+    overflow-x: auto;
+    margin: 0;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    color: $pre-res-color;
+    border-radius: 4px;
+    background: $pre-res-background;
+  }
+
+  &__textarea {
+    font: 400 16px/1 sans-serif;
+    width: 100%;
+    min-width: 100px;
+    max-width: 1370px;
+    padding: 8px 10px;
+    resize: none;
+    border: 1px solid $text-area-border;
+    border-radius: 4px;
+    background: $text-area-background;
+
+    &_add {
+      margin: 5px 0 10px;
+    }
+
+    &_update-data {
+      margin: 5px 0 10px;
+    }
+  }
+
+  &__input {
+    font: 400 16px/1 sans-serif;
+    min-width: 100px;
+    padding: 8px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background: #ffffff;
+
+    &_get-user {
+      margin: 5px 0 10px;
+    }
+
+    &_update-data {
+      margin: 5px 0;
+    }
+
+    &_delete {
+      margin: 5px 0 10px;
+    }
   }
 }

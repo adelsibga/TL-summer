@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+        <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Swagger-killer</title>
+        <title>Swagger UI</title>
     </head>
     <body>
         <main class="swagger">
@@ -17,8 +17,8 @@
                 </p>
             </div>
             <div class="swagger-wrapper">
-                <div class="js-add-user swagger__item swagger__item_post">
-                    <div class="item__content">
+                <div class="swagger__item swagger__item_post">
+                    <div class="item__content js-add-user">
                         <div class="swagger-item__button swagger-item__button_post">
                             POST
                         </div>
@@ -41,13 +41,26 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet aperiam, aspernatur beatae cumque dolorum error explicabo
-                        facere facilis incidunt maxime molestias nesciunt nostrum numquam omnis perspiciatis quos ratione recusandae rem saepe sint tempore
-                        totam, ullam velit. Animi aperiam error exercitationem fugiat laboriosam maxime nobis quibusdam recusandae suscipit veritatis.
+                        <label class="hidden" for="add-user"></label>
+                        <textarea
+                            class="item__textarea item__textarea_add"
+                            name="add-user"
+                            id="add-user"
+                            cols="30"
+                            rows="10"
+                            placeholder="placeholder"
+                        ></textarea>
+
+                        <button class="item__button" id="req-add-user">
+                            Execute
+                        </button>
+
+                        <pre class="item__response hidden" id="operation-add-user"></pre>
                     </div>
                 </div>
-                <div class="js-get-list-of-users swagger__item swagger__item_get">
-                    <div class="item__content">
+
+                <div class="swagger__item swagger__item_get">
+                    <div class="item__content js-get-list-of-users">
                         <div class="swagger-item__button swagger-item__button_get">
                             GET
                         </div>
@@ -70,13 +83,16 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet animi asperiores commodi, corporis deserunt dicta dignissimos
-                        doloribus error esse excepturi expedita fugiat fugit harum hic impedit inventore ipsa laborum minus natus nemo neque nihil nobis odit
-                        officia perspiciatis quam quasi qui quia rerum sint totam unde ut voluptates voluptatum!
+                        <button class="item__button" id="req-get-list-of-user">
+                            Execute
+                        </button>
+
+                        <pre class="item__response hidden" id="res-get-users"></pre>
                     </div>
                 </div>
-                <div class="js-get-spec-user swagger__item swagger__item_get">
-                    <div class="item__content">
+
+                <div class="swagger__item swagger__item_get">
+                    <div class="item__content js-get-spec-user">
                         <div class="swagger-item__button swagger-item__button_get">
                             GET
                         </div>
@@ -99,13 +115,25 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci architecto blanditiis commodi corporis delectus dolores
-                        doloribus dolorum ducimus, enim eos est, excepturi fugiat inventore ipsa ipsum itaque iure laudantium magnam, molestiae nam neque
-                        nulla numquam omnis pariatur perferendis provident quis sapiente sint soluta tenetur ut veritatis voluptatibus voluptatum.
+                        <label class="hidden" for="get-sec-user"></label>
+                        <input
+                            class="item__input item__input_get-user"
+                            id="get-sec-user"
+                            type="text"
+                            title="placeholder"
+                            placeholder="placeholder"
+                        >
+
+                        <button class="item__button" id="req-get-spec-user">
+                            Execute
+                        </button>
+
+                        <pre class="item__response hidden" id="operations-get-spec-user"></pre>
                     </div>
                 </div>
-                <div class="js-update-user-data swagger__item swagger__item_put">
-                    <div class="item__content">
+
+                <div class="swagger__item swagger__item_put">
+                    <div class="item__content js-update-user-data">
                         <div class="swagger-item__button swagger-item__button_put">
                             PUT
                         </div>
@@ -128,13 +156,35 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid blanditiis consequatur, earum eligendi eum natus tenetur
-                        vero vitae? Accusamus ad alias asperiores, atque, delectus deserunt earum eveniet laudantium necessitatibus, omnis perferendis
-                        similique voluptate! A consequuntur error et ipsam magni, maiores maxime mollitia natus, nostrum rem unde velit! Ab, quibusdam?
+                        <label class="hidden" for="update-user-data-id"></label>
+                        <input
+                            class="item__input item__input_update-data"
+                            id="update-user-data-id"
+                            type="text"
+                            title="placeholder"
+                            placeholder="placeholder"
+                        >
+
+                        <label class="hidden" for="update-user-data"></label>
+                        <textarea
+                            class="item__textarea item__textarea_update-data"
+                            name="add-user"
+                            id="update-user-data"
+                            cols="30"
+                            rows="10"
+                            placeholder="placeholder"
+                        ></textarea>
+
+                        <button class="item__button" id="req-update-user-data">
+                            Execute
+                        </button>
+
+                        <pre class="item__response hidden" id="operations-update-user-data"></pre>
                     </div>
                 </div>
-                <div class="js-deleting-user swagger__item swagger__item_delete">
-                    <div class="item__content">
+
+                <div class="swagger__item swagger__item_delete">
+                    <div class="item__content js-deleting-user">
                         <div class="swagger-item__button swagger-item__button_delete">
                             DELETE
                         </div>
@@ -157,12 +207,25 @@
                         </svg>
                     </div>
                     <div class="item__parameters-container">
-                        1
+                        <label class="hidden" for="delete-user"></label>
+                        <input
+                            class="item__input item__input_delete"
+                            id="delete-user"
+                            type="text"
+                            title="placeholder"
+                            placeholder="placeholder"
+                        >
+
+                        <button class="item__button" id="req-delete-user">
+                            Execute
+                        </button>
+
+                        <pre class="item__response hidden" id="res-delete-users"></pre>
                     </div>
                 </div>
             </div>
         </main>
-        <script type="module" src="/main.js"></script>
-        <script type="module" src="/scripts/slideAnimation/animation.js" defet></script>
+        <script type="module" src="/main.js" defer></script>
+        <script type="module" src="/scripts/slideAnimation/animation.js"></script>
     </body>
 </html>
