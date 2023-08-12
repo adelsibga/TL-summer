@@ -6,66 +6,35 @@ const operationGetSpecUser = document.querySelector('.js-get-spec-user')
 const operationUpdateUserData = document.querySelector('.js-update-user-data')
 const operationDeletingUser = document.querySelector('.js-deleting-user')
 
-const getChildrenArrow = (parent) => {
-    return parent.querySelector('.arrow')
+const animateOperationContent = el => {
+    slideToggle(el.nextElementSibling)
+
+    const getChildrenArrow = parent => parent.querySelector('.arrow')
+
+    const arrow = getChildrenArrow(el)
+    if (arrow.classList.contains('rotate')) {
+        arrow.classList.remove('rotate')
+    } else {
+        arrow.classList.add('rotate')
+    }
 }
 
 operationAddUser.addEventListener('click', () => {
-    slideToggle(operationAddUser.nextElementSibling)
-
-    const arrow = getChildrenArrow(operationAddUser)
-    if (arrow.classList.contains('rotate')) {
-        arrow.classList.remove('rotate')
-    }
-    else {
-        arrow.classList.add('rotate')
-    }
+    animateOperationContent(operationAddUser)
 })
 
 operationGetListOfUser.addEventListener('click', () => {
-    slideToggle(operationGetListOfUser.nextElementSibling)
-
-    const arrow = getChildrenArrow(operationGetListOfUser)
-    if (arrow.classList.contains('rotate')) {
-        arrow.classList.remove('rotate')
-    }
-    else {
-        arrow.classList.add('rotate')
-    }
+    animateOperationContent(operationGetListOfUser)
 })
 
 operationGetSpecUser.addEventListener('click', () => {
-    slideToggle(operationGetSpecUser.nextElementSibling)
-
-    const arrow = getChildrenArrow(operationGetSpecUser)
-    if (arrow.classList.contains('rotate')) {
-        arrow.classList.remove('rotate')
-    }
-    else {
-        arrow.classList.add('rotate')
-    }
+    animateOperationContent(operationGetSpecUser)
 })
 
 operationUpdateUserData.addEventListener('click', () => {
-    slideToggle(operationUpdateUserData.nextElementSibling)
-
-    const arrow = getChildrenArrow(operationUpdateUserData)
-    if (arrow.classList.contains('rotate')) {
-        arrow.classList.remove('rotate')
-    }
-    else {
-        arrow.classList.add('rotate')
-    }
+    animateOperationContent(operationUpdateUserData)
 })
 
 operationDeletingUser.addEventListener('click', () => {
-    slideToggle(operationDeletingUser.nextElementSibling)
-
-    const arrow = getChildrenArrow(operationDeletingUser)
-    if (arrow.classList.contains('rotate')) {
-        arrow.classList.remove('rotate')
-    }
-    else {
-        arrow.classList.add('rotate')
-    }
+    animateOperationContent(operationDeletingUser)
 })
